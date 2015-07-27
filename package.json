@@ -1,0 +1,37 @@
+{
+  "name": "passport-channeladvisor",
+  "version": "0.0.1",
+  "description": "Channel Advisor authentication strategy for Passport.",
+  "keywords": [
+    "passport",
+    "channeladvisor",
+    "auth",
+    "authn",
+    "authentication",
+    "identity"
+  ],
+  "author": {
+    "name": "Jonathan Segev",
+    "email": "jsegev01@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/yonib05/passport-channeladvisor.git"
+  },
+  "bugs": {
+    "url": "http://github.com/yonib05/passport-channeladvisor/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "./lib",
+  "dependencies": {
+    "passport-oauth2": "1.x.x"
+  },
+  "engines": {
+    "node": ">= 0.4.0"
+  }
+}

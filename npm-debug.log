@@ -1,0 +1,98 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/jonathansegev/WebstormProjects/passport-ChannelAdvisor',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/jonathansegev/.npm/passport-channeladvisor/0.0.1/package.tgz not in flight; packing
+9 verbose tar pack [ '/Users/jonathansegev/.npm/passport-channeladvisor/0.0.1/package.tgz',
+9 verbose tar pack   '/Users/jonathansegev/WebstormProjects/passport-ChannelAdvisor' ]
+10 verbose tarball /Users/jonathansegev/.npm/passport-channeladvisor/0.0.1/package.tgz
+11 verbose folder /Users/jonathansegev/WebstormProjects/passport-ChannelAdvisor
+12 info prepublish passport-channeladvisor@0.0.1
+13 verbose addLocalTarball adding from inside cache /Users/jonathansegev/.npm/passport-channeladvisor/0.0.1/package.tgz
+14 silly cache afterAdd passport-channeladvisor@0.0.1
+15 verbose afterAdd /Users/jonathansegev/.npm/passport-channeladvisor/0.0.1/package/package.json not in flight; writing
+16 verbose afterAdd /Users/jonathansegev/.npm/passport-channeladvisor/0.0.1/package/package.json written
+17 silly publish { name: 'passport-channeladvisor',
+17 silly publish   version: '0.0.1',
+17 silly publish   description: 'Channel Advisor authentication strategy for Passport.',
+17 silly publish   keywords:
+17 silly publish    [ 'passport',
+17 silly publish      'channeladvisor',
+17 silly publish      'auth',
+17 silly publish      'authn',
+17 silly publish      'authentication',
+17 silly publish      'identity' ],
+17 silly publish   author: { name: 'Jonathan Segev', email: 'jsegev01@gmail.com' },
+17 silly publish   repository:
+17 silly publish    { type: 'git',
+17 silly publish      url: 'http://github.com/yonib05/passport-channeladvisor.git' },
+17 silly publish   bugs: { url: 'http://github.com/yonib05/passport-channeladvisor/issues' },
+17 silly publish   licenses: [ { type: 'MIT', url: 'http://www.opensource.org/licenses/MIT' } ],
+17 silly publish   main: './lib',
+17 silly publish   dependencies: { 'passport-oauth2': '1.x.x' },
+17 silly publish   engines: { node: '>= 0.4.0' },
+17 silly publish   readme: '# Passport-GitHub\n\n[Passport](http://passportjs.org/) strategy for authenticating with [Channel Advisor](https://channeladvisor.com/)\nusing the OAuth 2.0 API.\n\nThis module lets you authenticate using GitHub in your Node.js applications.\nBy plugging into Passport, Channel Advisor authentication can be easily and\nunobtrusively integrated into any application or framework that supports\n[Connect](http://www.senchalabs.org/connect/)-style middleware, including\n[Express](http://expressjs.com/).\n\n## Install\n\n    $ npm install passport-channeladvisor\n\n## Usage\n\n#### Configure Strategy\n\nThe GitHub authentication strategy authenticates users using a GitHub account\nand OAuth 2.0 tokens.  The strategy requires a `verify` callback, which accepts\nthese credentials and calls `done` providing a user, as well as `options`\nspecifying a client ID, client secret, and callback URL.\n\n    passport.use(new ChannelAdvisorStrategy({\n        clientID: GITHUB_CLIENT_ID,\n        clientSecret: GITHUB_CLIENT_SECRET,\n        callbackURL: "http://127.0.0.1:3000/auth/channeladvisor/callback"\n      },\n      function(accessToken, refreshToken, profile, done) {\n        User.findOrCreate({ githubId: profile.id }, function (err, user) {\n          return done(err, user);\n        });\n      }\n    ));\n\n#### Authenticate Requests\n\nUse `passport.authenticate()`, specifying the `\'channeladvisor\'` strategy, to\nauthenticate requests.\n\nFor example, as route middleware in an [Express](http://expressjs.com/)\napplication:\n\n    app.get(\'/auth/channeladvisor\',\n      passport.authenticate(\'channeladvisor\'));\n\n    app.get(\'/auth/channeladvisor/callback\', \n      passport.authenticate(\'channeladvisor\', { failureRedirect: \'/login\' }),\n      function(req, res) {\n        // Successful authentication, redirect home.\n        res.redirect(\'/\');\n      });\n\n\n## License\n\n[The MIT License](http://opensource.org/licenses/MIT)\n\n',
+17 silly publish   readmeFilename: 'README.md',
+17 silly publish   homepage: 'https://github.com/yonib05/passport-channeladvisor',
+17 silly publish   _id: 'passport-channeladvisor@0.0.1',
+17 silly publish   scripts: {},
+17 silly publish   _shasum: '5ef904f5bd042db4dbc5e391d9fd0aaba78a644e',
+17 silly publish   _from: '.' }
+18 silly mapToRegistry name passport-channeladvisor
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry uri https://registry.npmjs.org/passport-channeladvisor
+22 verbose publish registryBase https://registry.npmjs.org/
+23 silly publish uploading /Users/jonathansegev/.npm/passport-channeladvisor/0.0.1/package.tgz
+24 verbose request uri https://registry.npmjs.org/passport-channeladvisor
+25 verbose request sending authorization for write operation
+26 info attempt registry request try #1 at 4:26:43 PM
+27 verbose request using bearer token for auth
+28 verbose request id 73f3f532f2a7b663
+29 http request PUT https://registry.npmjs.org/passport-channeladvisor
+30 http 403 https://registry.npmjs.org/passport-channeladvisor
+31 verbose headers { 'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=60',
+31 verbose headers   'content-length': '95',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   date: 'Mon, 27 Jul 2015 20:26:44 GMT',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'x-served-by': 'cache-atl6231-ATL',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1438028804.268246,VS0,VE346' }
+32 verbose request invalidating /Users/jonathansegev/.npm/registry.npmjs.org/passport-channeladvisor on PUT
+33 error publish Failed PUT 403
+34 verbose stack Error: "You cannot publish over the previously published version 0.0.1." : passport-channeladvisor
+34 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:247:14)
+34 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+34 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:344:22)
+34 verbose stack     at Request.emit (events.js:110:17)
+34 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1239:14)
+34 verbose stack     at Request.emit (events.js:129:20)
+34 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1187:12)
+34 verbose stack     at IncomingMessage.emit (events.js:129:20)
+34 verbose stack     at _stream_readable.js:908:16
+34 verbose stack     at process._tickCallback (node.js:355:11)
+35 verbose statusCode 403
+36 verbose pkgid passport-channeladvisor
+37 verbose cwd /Users/jonathansegev/WebstormProjects/passport-ChannelAdvisor
+38 error Darwin 14.3.0
+39 error argv "node" "/usr/local/bin/npm" "publish"
+40 error node v0.12.2
+41 error npm  v2.7.4
+42 error code E403
+43 error "You cannot publish over the previously published version 0.0.1." : passport-channeladvisor
+44 error If you need help, you may report this error at:
+44 error     <https://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]
