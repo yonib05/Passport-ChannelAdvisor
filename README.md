@@ -1,4 +1,8 @@
-# Passport-GitHub
+# Passport-ChannelAdvisor
+
+# In Development Do Not USE!!! (Yet..)
+
+
 
 [Passport](http://passportjs.org/) strategy for authenticating with [Channel Advisor](https://channeladvisor.com/)
 using the OAuth 2.0 API.
@@ -17,7 +21,7 @@ unobtrusively integrated into any application or framework that supports
 
 #### Configure Strategy
 
-The GitHub authentication strategy authenticates users using a GitHub account
+The Channel Advisor authentication strategy authenticates users using a ChannelAdvisor account
 and OAuth 2.0 tokens.  The strategy requires a `verify` callback, which accepts
 these credentials and calls `done` providing a user, as well as `options`
 specifying a client ID, client secret, and callback URL.
