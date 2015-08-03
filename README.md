@@ -27,9 +27,10 @@ these credentials and calls `done` providing a user, as well as `options`
 specifying a client ID, client secret, and callback URL.
 
     passport.use(new ChannelAdvisorStrategy({
-        clientID: GITHUB_CLIENT_ID,
-        clientSecret: GITHUB_CLIENT_SECRET,
-        callbackURL: "http://127.0.0.1:3000/auth/channeladvisor/callback"
+        client_id: CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        scope: ['orders', 'inventory'],
+        redirect_uri: "http://127.0.0.1:3000/auth/channeladvisor/callback"
       },
       function(accessToken, refreshToken, profile, done) {
         User.findOrCreate({ githubId: profile.id }, function (err, user) {
@@ -37,6 +38,31 @@ specifying a client ID, client secret, and callback URL.
         });
       }
     ));
+    
+    
+    ## Profile Return format
+    [  
+       {  
+          "$id":"1",
+          "Type":"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name",
+          "Value":"{%Name Of Company%}"
+       },
+       {  
+          "$id":"2",
+          "Type":"urn:ca:claim:scope",
+          "Value":"inventory"
+       },
+       {  
+          "$id":"3",
+          "Type":"urn:ca:claim:scope",
+          "Value":"orders"
+       },
+       {  
+          "$id":"4",
+          "Type":"urn:ca:claim:profile",
+          "Value":"{%ID Value Int%}"
+       }
+    ]
 
 #### Authenticate Requests
 
@@ -55,6 +81,8 @@ application:
         // Successful authentication, redirect home.
         res.redirect('/');
       });
+
+
 
 
 ## License

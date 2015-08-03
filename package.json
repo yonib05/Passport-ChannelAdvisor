@@ -1,6 +1,6 @@
 {
   "name": "passport-channeladvisor",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Channel Advisor authentication strategy for Passport.",
   "keywords": [
     "passport",
@@ -29,6 +29,7 @@
   ],
   "main": "./lib",
   "dependencies": {
+    "oauth": "^0.9.13",
     "passport-oauth2": "1.x.x"
   },
   "engines": {
