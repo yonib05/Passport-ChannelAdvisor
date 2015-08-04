@@ -30,7 +30,8 @@
   "main": "./lib",
   "dependencies": {
     "oauth": "^0.9.13",
-    "passport-oauth2": "1.x.x"
+    "passport-oauth2": "1.x.x",
+    "utils": "^0.2.2"
   },
   "engines": {
     "node": ">= 0.4.0"
